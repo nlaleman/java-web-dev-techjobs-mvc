@@ -18,7 +18,6 @@ public class JobData {
 
     private static final String DATA_FILE = "job_data.csv";
     private static boolean isDataLoaded = false;
-
     private static ArrayList<Job> allJobs;
     private static ArrayList<Employer> allEmployers = new ArrayList<>();
     private static ArrayList<Location> allLocations = new ArrayList<>();
@@ -201,6 +200,10 @@ public class JobData {
             System.out.println("Failed to load job data");
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<Job> getAllJobs() {
+        return allJobs;
     }
 
     public static ArrayList<Employer> getAllEmployers() {
